@@ -1,0 +1,25 @@
+{
+  "name": "next-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "compression": "^1.7.4",
+    "emotion": "^10.0.9",
+    "express": "^4.16.4",
+    "next": "^8.0.4",
+    "prismic-javascript": "^2.0.3",
+    "prismic-reactjs": "^0.3.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
