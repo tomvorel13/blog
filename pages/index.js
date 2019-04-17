@@ -3,63 +3,70 @@ import Link from 'next/link';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 
-const Index = ({ posts = [] }) => {
+const Index = () => {
   return (
     <Layout>
       <InnerWrap>
         <TextWrap>
-          <Text>
-            {'<'}Hi, my name is <Blue>Tom</Blue> and I am a passionate web
-            developer, currently working at MADFINGER Games {'/>'}
-          </Text>
+          <Text>Developer. Music lover. Sports fan.</Text>
         </TextWrap>
-        <SocialWrap>
-          <Icon src="/static/Mail.svg" alt="Mail Icon" />
-          <Icon src="/static/LinkedIN.svg" alt="LinkedIn Icon" />
-          <Icon src="/static/Github.svg" alt="Github Icon" />
-          <Icon src="/static/Twitter.svg" alt="Twitter Icon" />
-        </SocialWrap>
       </InnerWrap>
+      <SocialWrap>
+        <Icon src="/static/Mail.svg" alt="Mail Icon" />
+        <Icon src="/static/LinkedIN.svg" alt="LinkedIn Icon" />
+        <Icon src="/static/Github.svg" alt="Github Icon" />
+        <Icon src="/static/Twitter.svg" alt="Twitter Icon" />
+      </SocialWrap>
     </Layout>
   );
 };
 
 const InnerWrap = styled.div`
   margin-top: 15em;
-  display: flex;
-  justify-content: space-between;
 `;
 
 const SocialWrap = styled.div`
-  display: flex;
-  flex-direction: column;
+  margin-top: 1em;
 `;
 
 const Icon = styled.img`
-  max-width: 3em;
-  margin: auto;
-  display: block;
+  max-width: 1.7em;
+  margin-right: 1em;
+  display: inline-block;
 `;
 
 const TextWrap = styled.div`
   @media (min-width: 1024px) {
-    max-width: 50%;
+    width: 75%;
   }
 `;
 
-const Text = styled.span`
-  color: #343339;
-  font-size: 2.5em;
-  line-height: 1.5;
-  margin: 0;
+const Text = styled.h1`
+  border-right: solid 0.2em #55f897;
+  white-space: nowrap;
+  font-size: 3em;
+  overflow: hidden;
+  font-weight: 400;
+  animation: animated-text 3s steps(70, end) 1s 1 normal both,
+    animated-cursor 600ms steps(70, end) infinite;
 
-  @media (min-width: 1024px) {
-    font-size: 3.3em;
+  @keyframes animated-text {
+    from {
+      width: 0;
+    }
+    to {
+      width: 97%;
+    }
   }
-`;
 
-const Blue = styled.span`
-  color: #293cfb;
+  @keyframes animated-cursor {
+    from {
+      border-right-color: #55f897;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
 `;
 
 export default Index;
