@@ -47,7 +47,7 @@ const Text = styled.h1`
   font-size: 3em;
   overflow: hidden;
   font-weight: 400;
-  animation: animated-text 3s steps(70, end) 1s 1 normal both,
+  animation: animated-text 3s steps(70, end) 0.3s 1 normal both,
     animated-cursor 600ms steps(70, end) infinite;
 
   @keyframes animated-text {
