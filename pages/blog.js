@@ -10,7 +10,7 @@ const Blog = props => {
   const { posts = [] } = props;
   return (
     <Layout>
-      <h1>Blog post</h1>
+      <Headline>Blog</Headline>
       {
         <ul>
           {posts.map((post, index) => (
@@ -37,5 +37,9 @@ Blog.getInitialProps = async () => {
     posts: response.results
   };
 };
+
+const Headline = styled.h1`
+  font-weight: 400;
+`;
 
 export default Blog;

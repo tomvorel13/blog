@@ -10,8 +10,12 @@ const Layout = props => {
       <Head>
         <title>Tom Vorel</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700"
+          rel="stylesheet"
+        /> */}
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
           rel="stylesheet"
         />
       </Head>
@@ -30,7 +34,7 @@ injectGlobal`
 `;
 
 const Wrapper = styled.div`
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   color: #343339;
   font-size: 62.5%;
