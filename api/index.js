@@ -30,4 +30,17 @@ const getBlogPostAPI = async slug => {
   }
 };
 
-export { getBlogPostsAPI, getBlogPostAPI };
+const getAbout = async () => {
+  try {
+    const API = await Prismic.api(PRISMIC_API_URL);
+    const response = await API.query(
+      Prismic.Predicates.at('document.type', 'about')
+    );
+    return response;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+};
+
+export { getBlogPostsAPI, getBlogPostAPI, getAbout };

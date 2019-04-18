@@ -35,7 +35,6 @@ injectGlobal`
 
 const Wrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff;
   color: #343339;
   font-size: 62.5%;
   width: 100%;
